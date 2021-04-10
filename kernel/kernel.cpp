@@ -108,5 +108,5 @@ void terminal_writestring(const char *data)
 extern "C" void kernel_main(void)
 {
 	terminal_initialize();
-	terminal_writestring("Hello, kernel World!\n");
+	terminal_writestring("Welcome to unionOS \n");
 }
