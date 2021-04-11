@@ -1,0 +1,1 @@
+i686-elf-gcc -T linker.ld -o isodir/boot/unionOS.bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
