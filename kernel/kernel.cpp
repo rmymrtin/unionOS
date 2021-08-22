@@ -1,6 +1,6 @@
-#include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
+#include "gdt.h"
 
 #if defined(__linux__)
 #error "You are not using a cross-compiler, you will most certainly run into trouble"
@@ -116,6 +116,8 @@ void WriteCharacter(unsigned char c, unsigned char forecolour, unsigned char bac
 extern "C" void kernel_main(void)
 {
 	terminal_initialize();
+	init_gdt();
 	terminal_setcolor(VGA_COLOR_RED);
 	terminal_writestring("Welcome to unionOS !\n");
+	terminal_writestring("Your are on unionOS !\n");
 }
